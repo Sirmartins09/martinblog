@@ -182,18 +182,33 @@ main {
     transform: scale(1.02);
 }
 
-.like-button {
-    background-color: #1d8f58;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.buttons-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
 }
 
-.like-button:hover {
-    background-color: #146b41;
+.like-button,
+.read-more {
+  flex: 1 1 120px; /* Ambos ocupan el mismo ancho mínimo */
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 14px;
+  border: none;
+  background-color: #2e7d32; /* Verde oscuro */
+  color: white;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover para mejorar la experiencia */
+.like-button:hover,
+.read-more:hover {
+  background-color: #1b5e20;
 }
 
 
@@ -347,4 +362,12 @@ footer {
     .post {
         padding: 1.5rem;
     }
+}
+/* Estilos específicos para pantallas pequeñas */
+@media (max-width: 480px) {
+  .like-button-owner,
+  .read-more {
+    width: 100%; /* Ocupan todo el ancho disponible */
+    box-sizing: border-box;
+  }
 }
