@@ -1,0 +1,350 @@
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #146b41; /* Verde oscuro */
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-weight: 700;
+}
+
+nav{
+
+    align-items: center;
+    background-color: #146b41; /* Verde más oscuro */
+  display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    text-decoration: none;
+    
+    
+}
+
+.navbar .logo img{
+  border-radius: 60%;
+  padding: 0 80px;
+}
+ .nav-links {
+   list-style: none;
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    padding: 1rem 0;
+    display: inline-block;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    text-decoration: none;
+ }
+ 
+
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+}
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+/*INICIO*/
+.inicio {
+  background: linear-gradient(to top, rgba(30, 35, 38, 0.8), rgb(30, 35, 38)), url(../img/baner.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.inicio .contenido-banner {
+  padding: 20px;
+  background-color: #1e2326;
+  max-width: 350px;
+  margin: auto;
+  text-align: center;
+  border-radius: 40px;
+}
+
+.inicio .contenido-banner img {
+  margin-top: 40px;
+  border: 10px solid #1CB698;
+  display: block;
+  width: 28%;
+  margin: auto;
+  border-radius: 100%;
+}
+
+.inicio .contenido-banner h1 {
+  margin-top: 40px;
+  font-size: 42px;
+  font-family: "Righteous";
+}
+
+.inicio .contenido-banner h2 {
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.inicio .contenido-banner .redes a {
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  margin: 40px 5px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+/* .fa-instagram {
+    font-size: 2rem;
+    color: #E4405F;
+}
+.redes a {
+  color: white; /* Si el fondo también es blanco, no se ve */
+}
+
+/* 
+.redes i {
+  font-size: 30px;
+  color: #E1306C; /
+  display: inline-block;
+} */ */
+
+.inicio .contenido-banner .redes a:hover {
+  background-color: #1CB698;
+}
+
+.post {
+    background-color: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post h2 {
+    color: #1d8f58;
+    margin-top: 0;
+}
+
+.post-date {
+    font-style: italic;
+    color: #666;
+}
+/* Enlace que envuelve el artículo */
+.post-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.post-link:hover {
+    transform: scale(1.02);
+}
+
+.like-button {
+    background-color: #1d8f58;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.like-button:hover {
+    background-color: #146b41;
+}
+
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+}
+
+/*PAGINA DE ARTICULOS*/
+/* Tipografía moderna */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
+
+   body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fff;
+      color: #111;
+      line-height: 1.6;
+      padding: 20px;
+    }
+   .blog-post {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #ffffff; /* Rojo principal */
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #111;
+      border-left: 5px solid #e10600;
+      padding-left: 10px;
+      margin: 30px 0 15px 0;
+      font-size: 1.8rem;
+    }
+
+    p {
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+    }
+
+    ul {
+      margin: 10px 0 20px 20px;
+      list-style-type: disc;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    em {
+      font-style: italic;
+      color: #e10600;
+    }
+
+    /* Resaltar algunas frases en verde */
+    .highlight-green {
+      color: #2ecc71; /* Verde que resalta */
+      font-weight: 600;
+    }
+
+    /* Detalles en rojo */
+    .highlight-red {
+      color: #e10600;
+      font-weight: 600;
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .titulo-articulo {
+    font-size: 1.5rem;
+  }
+
+  .encabezado h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #146b41;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+  nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+    }
+
+    .inicio {
+        height: auto;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .inicio .contenido-banner {
+        width: 100%;
+        max-width: 90%;
+        margin: auto;
+    }
+
+    .inicio .contenido-banner img {
+        width: 60%;
+    }
+
+    main {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .post {
+        padding: 1.5rem;
+    }
+}
