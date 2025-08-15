@@ -3,66 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Blog Personal</title>
+    <title>Martin Dean | Mi Blog Personal</title>
+    <link rel="icon" href="./assets/img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="./assets/css/normalize.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://kit.fontawesome.com/TU-CODIGO.js" crossorigin="anonymous"></script>
-
-
 </head>
 <body>
 
-    <header>
+    <header class="header">
         <nav class="navbar">
-            <div class="logo">
-                <a href="./index.html"><img src="./assets/img/logo-blog.jpg" alt="Logo"></a>
-            </div>
+            <a href="./index.html" class="logo">
+                <img src="./assets/img/logo-blog.jpg" alt="Logo de Martin Dean">
+            </a>
             <button class="hamburger" id="hamburger">&#9776;</button>
-<ul class="nav-links" id="nav-links">
-    <li><a href="#inicio">Inicio</a></li>
-    <li><a href="#articulos">Artículos</a></li>
-    <li><a href="#Fotos">Fotos y Videos</a></li>
-    <li><a href="#contacto">Contacto</a></li>
-</ul>
-
-
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#articulos">Artículos</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="./pages/contacto.html">Contacto</a></li>
+            </ul>
         </nav>
     </header>
-               <!-- SECCION INICIO -->
-    <section id="inicio" class="inicio">
-        
-        <div class="contenido-banner">
-            <div class="contenedor-img">
-                <img src="./assets/img/img-blog.png" alt="Instagram">
+    
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <div class="hero-img">
+                <img src="./assets/img/img-blog.png" alt="Martin Dean">
             </div>
             <h1>Martin Dean</h1>
-            <div class="redes">
- <a href="https://www.instagram.com/deenmartinok/" target="_blank">
-    <i class="fa-brands fa-instagram"></i>
-</a>
-</div>
+            <p class="hero-subtitle">Primer intento: pensamientos, críticas y caos.</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/deenmartinok/" target="_blank" aria-label="Instagram de Martin Dean">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
         </div>
     </section>
 
-<main>
-<article class="post">
-    <h2>Primer intento: pensamientos, críticas y caos</h2>
-    <p class="post-date">Publicado el 14 de agosto de 2025</p>
-    <p>"Mi primer artículo, donde todo parece carecer de sentido… y sin embargo, algo intenta nacer."</p>
+    <main id="articulos" class="container">
+        <h2 class="section-title">Últimos Artículos</h2>
+        <article class="post">
+            <h3 class="post-title">El Caos Creativo: Mi Primer Artículo</h3>
+            <p class="post-date">Publicado el 14 de agosto de 2025</p>
+            <p class="post-excerpt">"Mi primer artículo, donde todo parece carecer de sentido… y sin embargo, algo intenta nacer."</p>
+            <div class="post-actions">
+                <button class="like-button">Me gusta (0)</button>
+                <a href="./pages/articulo1.html" class="btn btn-primary">Leer más</a>
+            </div>
+        </article>
+    </main>
 
-    <div class="buttons-container">
-        <button class="like-button">Me gusta (0)</button>
-        <a href="./pages/articulo1.html" class="read-more">Leer más</a>
-    </div>
-</article>
-
-</main>
-
-    <footer>
-        <p>&copy; 2025 Mi Blog. Todos los derechos reservados.</p>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Martin Dean. Todos los derechos reservados.</p>
+            <ul class="footer-links">
+                <li><a href="#">Política de Privacidad</a></li>
+                <li><a href="#">Términos de Servicio</a></li>
+            </ul>
+        </div>
     </footer>
 
     <script src="./js/main.js"></script>

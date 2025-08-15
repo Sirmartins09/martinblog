@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artículos | Mi Blog Personal</title>
+    <link rel="icon" href="./assets/img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="./index.html" class="logo">
+                <img src="../assets/img/logo-blog.jpg" alt="Logo de Martin Dean">
+            </a>
+            <button class="hamburger" id="hamburger">&#9776;</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../pages/articulos.html" class="active">Artículos</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="../pages/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="page-title">Últimos artículos</h1>
+        
+        <div class="articles-grid">
+            <article class="article-card">
+                <a href="../pages/articulo1.html" class="article-link">
+                    <img src="../assets/img/articulo-1.png" alt="Miniatura del artículo 1" class="article-image">
+                    <div class="card-content">
+                        <h2 class="article-title">El Caos Creativo: Mi Primer Artículo</h2>
+                        <p class="article-excerpt">"Mi primer artículo, donde todo parece carecer de sentido… y sin embargo, algo intenta nacer."</p>
+                        <span class="read-more-link">Leer más &rarr;</span>
+                    </div>
+                </a>
+            </article>
+
+            <!-- <article class="article-card">
+                <a href="#" class="article-link">
+                    <img src="./assets/img/articulo2-min.jpg" alt="Miniatura del artículo 2" class="article-image">
+                    <div class="card-content">
+                        <h2 class="article-title">Programar, procrastinar y el dilema existencial del desarrollador</h2>
+                        <p class="article-excerpt">Una reflexión sobre la productividad, el autosabotaje y la búsqueda de sentido en un mar de códigos.</p>
+                        <span class="read-more-link">Leer más &rarr;</span>
+                    </div>
+                </a>
+            </article> -->
+
+            </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Martin Dean. Todos los derechos reservados.</p>
+            <ul class="footer-links">
+                <li><a href="#">Política de Privacidad</a></li>
+                <li><a href="#">Términos de Servicio</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
