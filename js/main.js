@@ -43,3 +43,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Selecciona todos los botones de "Me gusta"
+    const likeButtons = document.querySelectorAll('.like-btn');
+
+    // Itera sobre cada botón para agregarle un "event listener"
+    likeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const heartIcon = button.querySelector('i');
+
+            // Alterna entre los estilos de corazón vacío y lleno
+            heartIcon.classList.toggle('fa-regular'); // Estilo de corazón vacío
+            heartIcon.classList.toggle('fa-solid');  // Estilo de corazón lleno
+
+            // Opcional: Alterna la clase 'liked' en el botón para el color
+            button.classList.toggle('liked');
+        });
+    });
+});

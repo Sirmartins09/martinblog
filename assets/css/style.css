@@ -465,6 +465,59 @@ width: 150px;
     color: var(--color-primary);
 }
 
+/* --- Estilos para la página de Fotos y Videos --- */
+
+.content {
+    max-width: 600px;
+    margin: 0 auto; /* Centra el contenido */
+}
+
+h1, p {
+    text-align: center;
+}
+
+.post {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.post img, .post video {
+    width: 100%;
+    display: block;
+}
+
+.post-actions {
+    padding: 10px;
+    text-align: right; /* Alinea el botón a la derecha */
+}
+
+.like-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #ff0000; /* Color gris para el corazón sin 'me gusta' */
+    transition: color 0.2s ease;
+}
+
+.like-btn:hover {
+    color: #e74c3c; /* Color rojo al pasar el mouse */
+}
+
+/* Clase para cuando el botón está activo (con 'me gusta') */
+.like-btn.liked {
+    color: #e74c3c;
+}
+
+/* Cambiar el ícono de corazón de vacío a sólido */
+.like-btn.liked .far.fa-heart::before {
+    content: "\f004"; /* Corazón sólido */
+    font-weight: 900; /* Esto es clave para que el ícono sea sólido */
+}
+
 
 
 
