@@ -518,7 +518,48 @@ h1, p {
     font-weight: 900; /* Esto es clave para que el ícono sea sólido */
 }
 
+/* ===================================================
+   Galería
+   =================================================== */
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
+.gallery-grid {
+    display: grid;
+    /* Esto crea columnas que se ajustan automáticamente */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; /* Espacio entre los elementos de la cuadrícula */
+    padding: 20px 0;
+}
+
+.gallery-item {
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    overflow: hidden; /* Asegura que la imagen no se salga del contenedor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex; /* Flexbox para centrar el contenido */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+/* Opcional: Centrar y limitar el tamaño de las publicaciones de Instagram */
+.instagram-media {
+    max-width: 100% !important; /* Asegura que no superen el tamaño del contenedor */
+    width: 100% !important;
+    margin: 0 auto !important; /* Centra las publicaciones dentro del ítem */
+}
 
 
 /* Responsive para dispositivos móviles */
