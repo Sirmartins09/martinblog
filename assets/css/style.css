@@ -465,6 +465,18 @@ width: 150px;
     color: var(--color-primary);
 }
 
+.entretenida {
+  text-align: center;
+}
+
+.entretenida img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+
 /* --- Estilos para la página de Fotos y Videos --- */
 
 .content {
@@ -559,6 +571,7 @@ h1, p {
 .gallery-item:hover img {
     transform: scale(1.05);
 }
+
 
 
 
