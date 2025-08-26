@@ -1,64 +1,40 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // 🍔 Menú hamburguesa
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
 
-    // Lógica del menú de hamburguesa
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
-
-    if (hamburger && navLinks) {
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('show');
-        });
-    }
-
-    // Lógica para los botones de "Me gusta"
-    const likeButtons = document.querySelectorAll('.like-button');
-    
-    likeButtons.forEach(button => {
-        // Obtiene el ID del artículo del atributo data-id
-        const postId = button.closest('.post').getAttribute('data-id');
-        
-        // Verifica si ya hay un contador guardado en el LocalStorage
-        let likesCount = localStorage.getItem(`likes-${postId}`);
-        
-        // Si no existe, inicializa el contador en 0
-        if (!likesCount) {
-            likesCount = 0;
-            localStorage.setItem(`likes-${postId}`, likesCount);
-        }
-        
-        // Actualiza el texto del botón con el contador actual
-        button.textContent = `Me gusta (${likesCount})`;
-        
-        // Añade un 'escuchador de eventos' para el clic del botón
-        button.addEventListener('click', () => {
-            // Incrementa el contador
-            likesCount++;
-            
-            // Actualiza el texto del botón
-            button.textContent = `Me gusta (${likesCount})`;
-            
-            // Guarda el nuevo valor en el LocalStorage
-            localStorage.setItem(`likes-${postId}`, likesCount);
-        });
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
     });
+  }
 
-});
+  // ❤️ Botones "Me gusta" con contador por artículo
+  const likeButtons = document.querySelectorAll('.like-button');
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Selecciona todos los botones de "Me gusta"
-    const likeButtons = document.querySelectorAll('.like-btn');
+  likeButtons.forEach(button => {
+    const post = button.closest('.post');
+    const postId = post.getAttribute('data-id');
 
-    // Itera sobre cada botón para agregarle un "event listener"
-    likeButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const heartIcon = button.querySelector('i');
+    let likesCount = parseInt(localStorage.getItem(`likes-${postId}`)) || 0;
+    button.textContent = `Me gusta (${likesCount})`;
 
-            // Alterna entre los estilos de corazón vacío y lleno
-            heartIcon.classList.toggle('fa-regular'); // Estilo de corazón vacío
-            heartIcon.classList.toggle('fa-solid');  // Estilo de corazón lleno
-
-            // Opcional: Alterna la clase 'liked' en el botón para el color
-            button.classList.toggle('liked');
-        });
+    button.addEventListener('click', () => {
+      likesCount++;
+      localStorage.setItem(`likes-${postId}`, likesCount);
+      button.textContent = `Me gusta (${likesCount})`;
     });
+  });
+
+  // 💖 Íconos de corazón con FontAwesome
+  const heartButtons = document.querySelectorAll('.like-btn');
+
+  heartButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const heartIcon = button.querySelector('i');
+      heartIcon.classList.toggle('fa-regular');
+      heartIcon.classList.toggle('fa-solid');
+      button.classList.toggle('liked');
+    });
+  });
 });
